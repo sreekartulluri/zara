@@ -1,0 +1,27 @@
+#include <Wire.h>
+#include <Adafruit_SSD1306.h>
+#include <Adafruit_GFX.h>
+#define OLED_WIDTH 128
+#define OLED_HEIGHT 64
+#define OLED_ADDR  0x3C
+Adafruit_SSD1306 display(OLED_WIDTH, OLED_HEIGHT);
+void setup() {
+  display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR);
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0, 0);
+  display.println("hello");
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0,17);
+  display.println("I AM");
+  display.println("ZARA");
+  display.println("voice assistant");
+  display.display();
+  delay(3000);
+  display.clearDisplay();
+}
+void loop()
+{
+}
