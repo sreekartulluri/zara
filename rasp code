@@ -1,0 +1,22 @@
+sudo apt update 
+sudo apt upgrade 
+sudo apt install git 
+sudo raspi-config
+
+///////dep needed already installed...in case
+sudo apt install -y python3-dev
+sudo apt install -y python-smbus i2c-tools
+sudo apt install -y python3-pil
+sudo apt install -y python3-pip
+sudo apt install -y python3-setuptools
+sudo apt install -y python3-rpi.gpio
+
+
+i2cdetect -y 1
+
+sudo apt install git 
+git clone https://github.com/adafruit/Adafruit_Python_SSD1306.git
+sudo python setup.py install
+
+////examples are there or else upload urs
+///python to run
